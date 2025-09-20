@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distinguished Kids - Where Learning is Fun!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Fredoka', sans-serif;
+        }
+        
+        .rainbow-gradient {
+            background: linear-gradient(45deg, #ff6b6b, #ffa500, #ffeb3b, #4caf50, #2196f3, #9c27b0, #e91e63);
+            background-size: 400% 400%;
+            animation: rainbow 3s ease infinite;
+        }
+        
+        @keyframes rainbow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .bounce-gentle {
+            animation: bounceGentle 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounceGentle {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 min-h-screen">
+    <!-- Header -->
+    <header class="rainbow-gradient text-white py-4 shadow-lg">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="text-4xl">📚</div>
+                    <h1 class="text-3xl font-bold">Distinguished Kids</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-yellow-200 transition-colors font-medium">Home</a>
+                    <a href="#about" class="hover:text-yellow-200 transition-colors font-medium">About</a>
+                    <a href="#programs" class="hover:text-yellow-200 transition-colors font-medium">Programs</a>
+                    <a href="#team" class="hover:text-yellow-200 transition-colors font-medium">Our Team</a>
+                    <a href="#events" class="hover:text-yellow-200 transition-colors font-medium">Events</a>
+                    <a href="#contact" class="hover:text-yellow-200 transition-colors font-medium">Contact</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 px-4">
+        <div class="container mx-auto text-center">
+            <div class="bounce-gentle inline-block text-8xl mb-6">🎨</div>
+            <h2 class="text-5xl md:text-6xl font-bold text-purple-800 mb-6">
+                Where Learning is <span class="rainbow-gradient bg-clip-text text-transparent">Magical!</span>
+            </h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+                Join our colorful world of discovery, creativity, and fun! At Distinguished Kids, every day is an adventure filled with learning and laughter.
+            </p>
+            
+            <!-- Picture Space: Hero Image -->
+            <div class="max-w-4xl mx-auto mb-8">
+                <div class="w-full h-64 bg-white rounded-3xl flex items-center justify-center border-4 border-dashed border-purple-300 shadow-lg">
+                    <div class="text-center text-purple-500">
+                        <div class="text-6xl mb-3">📸</div>
+                        <p class="text-xl font-semibold">Add Main Hero Photo Here</p>
+                        <p class="text-sm">Happy children learning & playing</p>
+                    </div>
+                </div>
+            </div>
+           
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-purple-800 mb-4">About Distinguished Kids</h3>
+                <div class="w-24 h-1 rainbow-gradient mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h4 class="text-2xl font-semibold text-green-600 mb-4">🌟 Our Mission</h4>
+                    <p class="text-gray-700 mb-6 text-lg">
+                        We believe every child is unique and special. Our mission is to nurture young minds through play-based learning, creativity, and exploration in a safe, loving environment.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-2xl">🎯</span>
+                            <span class="text-gray-700">Individualized learning approach</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-2xl">👥</span>
+                            <span class="text-gray-700">Small class sizes for personal attention</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-2xl">🏆</span>
+                            <span class="text-gray-700">Experienced, caring teachers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-yellow-200 to-orange-200 p-8 rounded-3xl">
+                    <div class="text-center">
+                        <!-- Picture Space: School Building/Campus -->
+                        <div class="w-full h-48 bg-white rounded-2xl mb-4 flex items-center justify-center border-4 border-dashed border-orange-300">
+                            <div class="text-center text-orange-600">
+                                <div class="text-4xl mb-2">📸</div>
+                                <p class="font-semibold">Add School Photo Here</p>
+                                <p class="text-sm">Campus & Building Images</p>
+                            </div>
+                        </div>
+                        <h5 class="text-xl font-semibold text-orange-800 mb-2">Our Beautiful Campus</h5>
+                        <p class="text-orange-700">
+                            Bright, colorful classrooms designed to inspire creativity and learning, with safe outdoor play areas and modern facilities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-16 px-4 bg-gradient-to-r from-purple-100 to-pink-100">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-purple-800 mb-4">Our Programs</h3>
+                <div class="w-24 h-1 rainbow-gradient mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Preschool Program -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover">
+                    <div class="text-center">
+                        <!-- Picture Space: Preschool Classroom -->
+                        <div class="w-full h-32 bg-red-50 rounded-xl mb-4 flex items-center justify-center border-3 border-dashed border-red-300">
+                            <div class="text-center text-red-500">
+                                <div class="text-2xl mb-1">📸</div>
+                                <p class="text-xs font-semibold">Preschool Photos</p>
+                            </div>
+                        </div>
+                        <div class="text-5xl mb-4">🎨</div>
+                        <h4 class="text-2xl font-bold text-red-600 mb-4">Preschool (3-4 years)</h4>
+                        <p class="text-gray-700 mb-6">
+                            Creative play, early literacy, social skills, and art exploration in a nurturing environment.
+                        </p>
+                        <div class="space-y-2 text-left">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-green-500">✓</span>
+                                <span class="text-sm">Art & Craft Activities</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-green-500">✓</span>
+                                <span class="text-sm">Story Time & Reading</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-green-500">✓</span>
+                                <span class="text-sm">Music & Movement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pre-K Program -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover">
+                    <div class="text-center">
+                        <!-- Picture Space: Pre-K Classroom -->
+                        <div class="w-full h-32 bg-blue-50 rounded-xl mb-4 flex items-center justify-center border-3 border-dashed border-blue-300">
+                            <div class="text-center text-blue-500">
+                                <div class="text-2xl mb-1">📸</div>
+                                <p class="text-xs font-semibold">Pre-K Photos</p>
+                            </div>
+                        </div>
+                        <div class="text-5xl mb-4">📚</div>
+                        <h4 class="text-2xl font-bold text-blue-600 mb-4">Pre-K (4-5 years)</h4>
+                        <p class="text-gray-700 mb-6">
+                            School readiness program focusing on early math, writing, and social-emotional development.
+                        </p>
+                        <div class="space-y-2 text-left">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-green-500">✓</span>
+                                <span class="text-sm">Letter & Number Recognition</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-green-500">✓</span>
+                                <span class="text-sm">Science Experiments</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-green-500">✓</span>
+                                <span class="text-sm">Problem Solving Skills</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kindergarten Program -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover">
+                    <div class="text-center">
+                        <!-- Picture Space: Kindergarten Classroom -->
+                        <div class="w-full h-32 bg-green-50 rounded-xl mb-4 flex items-center justify-center border-3 border-dashed border-green-300">
+                            <div class="text-center text-green-500">
+                                <div class="text-2xl mb-1">📸</div>
+                                <p class="text-xs font-semibold">Kindergarten Photos</p>
+                            </div>
+                        </div>
+                        <div class="text-5xl mb-4">🎓</div>
+                        <h4 class="text-2xl font-bold text-green-600 mb-4">Kindergarten (5-6 years)</h4>
+                        <p class="text-gray-700 mb-6">
+                            Comprehensive curriculum preparing children for elementary school success with confidence.
+                        </p>
+                        <div class="space-y-2 text-left">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-green-500">✓</span>
+                                <span class="text-sm">Reading & Writing Skills</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-green-500">✓</span>
+                                <span class="text-sm">Math Fundamentals</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-green-500">✓</span>
+                                <span class="text-sm">Critical Thinking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-purple-800 mb-4">Fun Activities</h3>
+                <div class="w-24 h-1 rainbow-gradient mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center p-6 bg-red-100 rounded-2xl card-hover">
+                    <div class="text-4xl mb-3">🎭</div>
+                    <h5 class="font-semibold text-red-700">Drama & Theater</h5>
+                </div>
+                <div class="text-center p-6 bg-orange-100 rounded-2xl card-hover">
+                    <div class="text-4xl mb-3">🎵</div>
+                    <h5 class="font-semibold text-orange-700">Music & Dance</h5>
+                </div>
+                <div class="text-center p-6 bg-yellow-100 rounded-2xl card-hover">
+                    <div class="text-4xl mb-3">🔬</div>
+                    <h5 class="font-semibold text-yellow-700">Science Fun</h5>
+                </div>
+                <div class="text-center p-6 bg-green-100 rounded-2xl card-hover">
+                    <div class="text-4xl mb-3">🏃</div>
+                    <h5 class="font-semibold text-green-700">Sports & Games</h5>
+                </div>
+                <div class="text-center p-6 bg-blue-100 rounded-2xl card-hover">
+                    <div class="text-4xl mb-3">🧩</div>
+                    <h5 class="font-semibold text-blue-700">Puzzles & Logic</h5>
+                </div>
+                <div class="text-center p-6 bg-indigo-100 rounded-2xl card-hover">
+                    <div class="text-4xl mb-3">🌱</div>
+                    <h5 class="font-semibold text-indigo-700">Gardening</h5>
+                </div>
+                <div class="text-center p-6 bg-purple-100 rounded-2xl card-hover">
+                    <div class="text-4xl mb-3">🍳</div>
+                    <h5 class="font-semibold text-purple-700">Cooking Class</h5>
+                </div>
+                <div class="text-center p-6 bg-pink-100 rounded-2xl card-hover">
+                    <div class="text-4xl mb-3">📖</div>
+                    <h5 class="font-semibold text-pink-700">Story Time</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Team Section -->
+    <section id="team" class="py-16 px-4 bg-gradient-to-br from-rose-100 to-pink-100">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-purple-800 mb-4">Meet Our Amazing Team</h3>
+                <div class="w-24 h-1 rainbow-gradient mx-auto rounded-full"></div>
+                <p class="text-lg text-gray-700 mt-4">The caring hearts and brilliant minds behind Distinguished Kids!</p>
+            </div>
+            
+            <!-- Owner/Founder Section -->
+            <div class="bg-white rounded-3xl p-8 shadow-lg mb-12 max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center">
+                        <!-- Picture Space: Owner Photo -->
+                        <div class="w-48 h-48 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full mx-auto mb-4 flex items-center justify-center border-4 border-dashed border-purple-400 shadow-lg">
+                            <div class="text-center text-purple-600">
+                                <div class="text-4xl mb-2">📸</div>
+                                <p class="font-semibold">Owner Photo</p>
+                                <p class="text-xs">Professional headshot</p>
+                            </div>
+                        </div>
+                        <div class="text-4xl mb-2">👑</div>
+                        <h4 class="text-2xl font-bold text-purple-700">Founder & Director</h4>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-bold text-pink-600 mb-4">Pastor Bongi Makhavhu</h4>
+                        <p class="text-lg text-gray-700 mb-4">
+                            "Every child deserves to feel special, loved, and excited about learning. That's the vision that inspired me to create Distinguished Kids."
+                        </p>
+                         
+                        <div class="mt-6 p-4 bg-pink-50 rounded-xl">
+                            <p class="text-pink-800 italic">
+                                "I started Distinguished Kids because I believe every child has unique gifts waiting to be discovered. Our mission is to nurture those gifts with love, patience, and joy!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Teachers Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Teacher 1 -->
+                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover">
+                    <div class="text-center">
+                        <!-- Picture Space: Teacher Photo -->
+                        <div class="w-32 h-32 bg-gradient-to-br from-blue-200 to-cyan-200 rounded-full mx-auto mb-4 flex items-center justify-center border-3 border-dashed border-blue-400">
+                            <div class="text-center text-blue-600">
+                                <div class="text-2xl mb-1">📸</div>
+                                <p class="text-xs font-semibold">Teacher Photo</p>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-blue-600 mb-2">Miss Emily Chen</h4>
+                        <p class="text-blue-500 font-semibold mb-3">Preschool Lead Teacher</p>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Specializes in creative arts and sensory learning. Emily makes every day magical with her endless energy and creativity!
+                        </p>
+                       
+                    </div>
+                </div>
+
+                <!-- Teacher 2 -->
+                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover">
+                    <div class="text-center">
+                        <!-- Picture Space: Teacher Photo -->
+                        <div class="w-32 h-32 bg-gradient-to-br from-green-200 to-emerald-200 rounded-full mx-auto mb-4 flex items-center justify-center border-3 border-dashed border-green-400">
+                            <div class="text-center text-green-600">
+                                <div class="text-2xl mb-1">📸</div>
+                                <p class="text-xs font-semibold">Teacher Photo</p>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-green-600 mb-2">Mr. David Rodriguez</h4>
+                        <p class="text-green-500 font-semibold mb-3">Pre-K Lead Teacher</p>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Our science and nature expert! David brings the outdoors inside and makes learning about the world exciting and hands-on.
+                        </p>
+                       
+                    </div>
+                </div>
+
+                <!-- Teacher 3 -->
+                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover">
+                    <div class="text-center">
+                        <!-- Picture Space: Teacher Photo -->
+                        <div class="w-32 h-32 bg-gradient-to-br from-purple-200 to-violet-200 rounded-full mx-auto mb-4 flex items-center justify-center border-3 border-dashed border-purple-400">
+                            <div class="text-center text-purple-600">
+                                <div class="text-2xl mb-1">📸</div>
+                                <p class="text-xs font-semibold">Teacher Photo</p>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-purple-600 mb-2">Mrs. Lisa Thompson</h4>
+                        <p class="text-purple-500 font-semibold mb-3">Kindergarten Lead Teacher</p>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Reading and writing specialist who makes letters and numbers come alive! Lisa prepares our kids for elementary school with confidence.
+                        </p>
+                       
+                    </div>
+                </div>
+
+                <!-- Teacher 4 -->
+                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover">
+                    <div class="text-center">
+                        <!-- Picture Space: Teacher Photo -->
+                        <div class="w-32 h-32 bg-gradient-to-br from-orange-200 to-yellow-200 rounded-full mx-auto mb-4 flex items-center justify-center border-3 border-dashed border-orange-400">
+                            <div class="text-center text-orange-600">
+                                <div class="text-2xl mb-1">📸</div>
+                                <p class="text-xs font-semibold">Teacher Photo</p>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-orange-600 mb-2">Miss Maria Santos</h4>
+                        <p class="text-orange-500 font-semibold mb-3">Music & Movement Teacher</p>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Brings joy through music and dance! Maria teaches Spanish, leads our choir, and gets everyone moving to the rhythm of learning.
+                        </p>
+                       
+                    </div>
+                </div>
+
+                <!-- Teacher 5 -->
+                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover">
+                    <div class="text-center">
+                        <!-- Picture Space: Teacher Photo -->
+                        <div class="w-32 h-32 bg-gradient-to-br from-red-200 to-pink-200 rounded-full mx-auto mb-4 flex items-center justify-center border-3 border-dashed border-red-400">
+                            <div class="text-center text-red-600">
+                                <div class="text-2xl mb-1">📸</div>
+                                <p class="text-xs font-semibold">Teacher Photo</p>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-red-600 mb-2">Mrs. Jennifer Kim</h4>
+                        <p class="text-red-500 font-semibold mb-3">Assistant Director & Special Needs Coordinator</p>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Ensures every child gets the support they need to thrive. Jennifer's patience and expertise help all children reach their potential.
+                        </p>
+                       
+                    </div>
+                </div>
+
+                <!-- Teacher 6 -->
+                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover">
+                    <div class="text-center">
+                        <!-- Picture Space: Teacher Photo -->
+                        <div class="w-32 h-32 bg-gradient-to-br from-teal-200 to-cyan-200 rounded-full mx-auto mb-4 flex items-center justify-center border-3 border-dashed border-teal-400">
+                            <div class="text-center text-teal-600">
+                                <div class="text-2xl mb-1">📸</div>
+                                <p class="text-xs font-semibold">Teacher Photo</p>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-teal-600 mb-2">Mr. Alex Johnson</h4>
+                        <p class="text-teal-500 font-semibold mb-3">Physical Education & Outdoor Learning</p>
+                        <p class="text-gray-700 text-sm mb-4">
+                            Gets kids moving and exploring! Alex leads our outdoor adventures, sports activities, and teaches kids about healthy living.
+                        </p>
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Values -->
+            <div class="mt-12 bg-white rounded-3xl p-8 shadow-lg">
+                <h4 class="text-2xl font-bold text-center text-purple-800 mb-6">What Makes Our Team Special</h4>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center p-4">
+                        <div class="text-4xl mb-3">💝</div>
+                        <h5 class="font-bold text-pink-600 mb-2">Passionate & Caring</h5>
+                        <p class="text-gray-700 text-sm">Every teacher genuinely loves working with children and treats each child like their own.</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <div class="text-4xl mb-3">🎓</div>
+                        <h5 class="font-bold text-blue-600 mb-2">Highly Qualified</h5>
+                        <p class="text-gray-700 text-sm">All our teachers have degrees in education and continue professional development training.</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <div class="text-4xl mb-3">🌟</div>
+                        <h5 class="font-bold text-green-600 mb-2">Creative & Fun</h5>
+                        <p class="text-gray-700 text-sm">We believe learning should be joyful! Our teachers make every lesson an exciting adventure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="py-16 px-4 bg-gradient-to-br from-indigo-100 to-purple-100">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-purple-800 mb-4">Our Happy Moments</h3>
+                <div class="w-24 h-1 rainbow-gradient mx-auto rounded-full"></div>
+                <p class="text-lg text-gray-700 mt-4">Capturing the joy, laughter, and learning that happens every day!</p>
+            </div>
+            
+            <!-- Photo Gallery Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 auto-rows-max">
+                <!-- Large Photo Space 1 -->
+                <div class="col-span-2 row-span-2">
+                    <div class="w-full h-64 bg-white rounded-2xl flex items-center justify-center border-4 border-dashed border-pink-300 shadow-lg card-hover">
+                        <div class="text-center text-pink-500">
+                            <div class="text-4xl mb-2">📸</div>
+                            <p class="font-semibold">Classroom Fun</p>
+                            <p class="text-xs">Large group activities</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Medium Photo Space 1 -->
+                <div class="col-span-1 row-span-1">
+                    <div class="w-full h-32 bg-white rounded-xl flex items-center justify-center border-3 border-dashed border-blue-300 shadow-md card-hover">
+                        <div class="text-center text-blue-500">
+                            <div class="text-2xl mb-1">📸</div>
+                            <p class="text-xs font-semibold">Art Time</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Medium Photo Space 2 -->
+                <div class="col-span-1 row-span-1">
+                    <div class="w-full h-32 bg-white rounded-xl flex items-center justify-center border-3 border-dashed border-green-300 shadow-md card-hover">
+                        <div class="text-center text-green-500">
+                            <div class="text-2xl mb-1">📸</div>
+                            <p class="text-xs font-semibold">Reading</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Small Photo Space 1 -->
+                <div class="col-span-1 row-span-1">
+                    <div class="w-full h-24 bg-white rounded-lg flex items-center justify-center border-2 border-dashed border-purple-300 shadow-sm card-hover">
+                        <div class="text-center text-purple-500">
+                            <div class="text-xl">📸</div>
+                            <p class="text-xs">Play</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Small Photo Space 2 -->
+                <div class="col-span-1 row-span-1">
+                    <div class="w-full h-24 bg-white rounded-lg flex items-center justify-center border-2 border-dashed border-orange-300 shadow-sm card-hover">
+                        <div class="text-center text-orange-500">
+                            <div class="text-xl">📸</div>
+                            <p class="text-xs">Snack</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Medium Photo Space 3 -->
+                <div class="col-span-1 row-span-1">
+                    <div class="w-full h-32 bg-white rounded-xl flex items-center justify-center border-3 border-dashed border-yellow-300 shadow-md card-hover">
+                        <div class="text-center text-yellow-600">
+                            <div class="text-2xl mb-1">📸</div>
+                            <p class="text-xs font-semibold">Science</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Medium Photo Space 4 -->
+                <div class="col-span-1 row-span-1">
+                    <div class="w-full h-32 bg-white rounded-xl flex items-center justify-center border-3 border-dashed border-red-300 shadow-md card-hover">
+                        <div class="text-center text-red-500">
+                            <div class="text-2xl mb-1">📸</div>
+                            <p class="text-xs font-semibold">Music</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Large Photo Space 2 -->
+                <div class="col-span-2 row-span-2">
+                    <div class="w-full h-64 bg-white rounded-2xl flex items-center justify-center border-4 border-dashed border-indigo-300 shadow-lg card-hover">
+                        <div class="text-center text-indigo-500">
+                            <div class="text-4xl mb-2">📸</div>
+                            <p class="font-semibold">Outdoor Play</p>
+                            <p class="text-xs">Playground adventures</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Small Photo Space 3 -->
+                <div class="col-span-1 row-span-1">
+                    <div class="w-full h-24 bg-white rounded-lg flex items-center justify-center border-2 border-dashed border-teal-300 shadow-sm card-hover">
+                        <div class="text-center text-teal-500">
+                            <div class="text-xl">📸</div>
+                            <p class="text-xs">Lunch</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Medium Photo Space 5 -->
+                <div class="col-span-1 row-span-1">
+                    <div class="w-full h-32 bg-white rounded-xl flex items-center justify-center border-3 border-dashed border-rose-300 shadow-md card-hover">
+                        <div class="text-center text-rose-500">
+                            <div class="text-2xl mb-1">📸</div>
+                            <p class="text-xs font-semibold">Crafts</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Small Photo Space 4 -->
+                <div class="col-span-1 row-span-1">
+                    <div class="w-full h-24 bg-white rounded-lg flex items-center justify-center border-2 border-dashed border-cyan-300 shadow-sm card-hover">
+                        <div class="text-center text-cyan-500">
+                            <div class="text-xl">📸</div>
+                            <p class="text-xs">Friends</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Medium Photo Space 6 -->
+                <div class="col-span-1 row-span-1">
+                    <div class="w-full h-32 bg-white rounded-xl flex items-center justify-center border-3 border-dashed border-emerald-300 shadow-md card-hover">
+                        <div class="text-center text-emerald-500">
+                            <div class="text-2xl mb-1">📸</div>
+                            <p class="text-xs font-semibold">Events</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="text-gray-600 mb-4">Want to see more photos? Follow us on social media!</p>
+                <div class="space-x-4">
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full font-semibold transition-colors">
+                        📘 Facebook Gallery
+                    </button>
+                    <button class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full font-semibold transition-colors">
+                        📷 Instagram Photos
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-16 px-4 bg-gradient-to-r from-yellow-100 to-orange-100">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-purple-800 mb-4">Upcoming Events</h3>
+                <div class="w-24 h-1 rainbow-gradient mx-auto rounded-full"></div>
+                <p class="text-lg text-gray-700 mt-4">Join us for these exciting activities and celebrations!</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event 1: Spring Festival -->
+                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover border-l-4 border-pink-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-3xl">🌸</div>
+                        <div class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-semibold">
+                            March 15
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-pink-600 mb-2">Spring Festival</h4>
+                    <p class="text-gray-700 mb-3">Celebrate the arrival of spring with flower planting, nature crafts, and outdoor games!</p>
+                    <div class="text-sm text-gray-600">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span>🕐</span>
+                            <span>10:00 AM - 2:00 PM</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>👨‍👩‍👧‍👦</span>
+                            <span>Families welcome</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2: Science Fair -->
+                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover border-l-4 border-blue-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-3xl">🔬</div>
+                        <div class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">
+                            March 22
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-blue-600 mb-2">Little Scientists Fair</h4>
+                    <p class="text-gray-700 mb-3">Watch our young scientists showcase their amazing experiments and discoveries!</p>
+                    <div class="text-sm text-gray-600">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span>🕐</span>
+                            <span>9:30 AM - 11:30 AM</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>🎓</span>
+                            <span>Pre-K & Kindergarten</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3: Art Exhibition -->
+                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover border-l-4 border-purple-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-3xl">🎨</div>
+                        <div class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold">
+                            April 5
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-purple-600 mb-2">Rainbow Art Exhibition</h4>
+                    <p class="text-gray-700 mb-3">Admire the creative masterpieces created by our talented young artists!</p>
+                    <div class="text-sm text-gray-600">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span>🕐</span>
+                            <span>3:00 PM - 5:00 PM</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>🖼️</span>
+                            <span>All ages welcome</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4: Earth Day -->
+                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover border-l-4 border-green-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-3xl">🌍</div>
+                        <div class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
+                            April 22
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-green-600 mb-2">Earth Day Celebration</h4>
+                    <p class="text-gray-700 mb-3">Learn about our planet with recycling projects, tree planting, and eco-friendly crafts!</p>
+                    <div class="text-sm text-gray-600">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span>🕐</span>
+                            <span>All day activities</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>♻️</span>
+                            <span>Eco-friendly fun</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 5: Music Concert -->
+                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover border-l-4 border-yellow-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-3xl">🎵</div>
+                        <div class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">
+                            May 10
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-yellow-600 mb-2">Spring Music Concert</h4>
+                    <p class="text-gray-700 mb-3">Enjoy beautiful performances by our little musicians and singers!</p>
+                    <div class="text-sm text-gray-600">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span>🕐</span>
+                            <span>6:00 PM - 7:30 PM</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>🎤</span>
+                            <span>Evening performance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 6: Graduation -->
+                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover border-l-4 border-red-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-3xl">🎓</div>
+                        <div class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold">
+                            May 25
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-red-600 mb-2">Kindergarten Graduation</h4>
+                    <p class="text-gray-700 mb-3">Celebrate our kindergarten graduates as they prepare for elementary school!</p>
+                    <div class="text-sm text-gray-600">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span>🕐</span>
+                            <span>10:00 AM - 12:00 PM</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>🎉</span>
+                            <span>Special ceremony</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 bg-gradient-to-br from-blue-100 to-purple-100">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-purple-800 mb-4">Get in Touch</h3>
+                <div class="w-24 h-1 rainbow-gradient mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-1 gap-12">
+                <div class="bg-white rounded-3xl p-8 shadow-lg ">
+                    <h4 class="text-2xl font-bold text-green-600 mb-6">Contact Information</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="text-2xl">📍</div>
+                            <div>
+                                <p class="font-semibold">Address</p>
+                                <p class="text-gray-600">123 Rainbow Lane, Sunshine City, SC 12345</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="text-2xl">📞</div>
+                            <div>
+                                <p class="font-semibold">Phone</p>
+                                <p class="text-gray-600">(555) 123-KIDS</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="text-2xl">✉️</div>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p class="text-gray-600">hello@distinguishedkids.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="text-2xl">🕐</div>
+                            <div>
+                                <p class="font-semibold">Hours</p>
+                                <p class="text-gray-600">Monday - Friday: 7:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="rainbow-gradient text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="flex justify-center items-center space-x-3 mb-6">
+                    <div class="text-4xl">📚</div>
+                    <h2 class="text-3xl font-bold">Distinguished Kids</h2>
+                </div>
+                <p class="text-lg mb-6">Where every child shines bright like a rainbow! ✨</p>
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="hover:text-yellow-200 transition-colors">📘 Facebook</a>
+
+                </div>
+                <p class="text-sm opacity-80">© 2025 Distinguished Kids. All rights reserved. Made with 💖 for amazing kids!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+      
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9807db6294bc73f9',t:'MTc1ODEwNDI3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
