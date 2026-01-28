@@ -1,705 +1,659 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distinguished Kids - Where Learning is Fun!</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Fredoka', sans-serif;
-        }
-        
-        .rainbow-gradient {
-            background: linear-gradient(45deg, #ff6b6b, #ffa500, #ffeb3b, #4caf50, #2196f3, #9c27b0, #e91e63);
-            background-size: 400% 400%;
-            animation: rainbow 3s ease infinite;
-        }
-        
-        @keyframes rainbow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        .bounce-gentle {
-            animation: bounceGentle 2s ease-in-out infinite;
-        }
-        
-        @keyframes bounceGentle {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-    </style>
-</head>
-<body class="bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100 min-h-screen">
-    <!-- Header -->
-    <header class="rainbow-gradient text-white py-4 shadow-lg">
-        <div class="container mx-auto px-4">
-            <nav class="flex justify-between items-center">
-                <div class="flex items-center space-x-3">
-                    <div class="text-4xl">📚</div>
-                    <h1 class="text-3xl font-bold">Distinguished Kids</h1>
-                </div>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#home" class="hover:text-yellow-200 transition-colors font-medium">Home</a>
-                    <a href="#about" class="hover:text-yellow-200 transition-colors font-medium">About</a>
-                    <a href="#programs" class="hover:text-yellow-200 transition-colors font-medium">Programs</a>
-                    <a href="#team" class="hover:text-yellow-200 transition-colors font-medium">Our Team</a>
-                    <a href="#events" class="hover:text-yellow-200 transition-colors font-medium">Events</a>
-                    <a href="#contact" class="hover:text-yellow-200 transition-colors font-medium">Contact</a>
-                </div>
-                <button class="md:hidden text-white">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="py-20 px-4">
-        <div class="container mx-auto text-center">
-            <div class="bounce-gentle inline-block text-8xl mb-6">🎨</div>
-            <h2 class="text-5xl md:text-6xl font-bold text-purple-800 mb-6">
-                Where Learning is <span class="rainbow-gradient bg-clip-text text-transparent">Magical!</span>
-            </h2>
-            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-                Join our colorful world of discovery, creativity, and fun! At Distinguished Kids, every day is an adventure filled with learning and laughter.
-            </p>
-            
-            <!-- Picture Space: Hero Image -->
-            <div class="max-w-4xl mx-auto mb-8">
-                <div class="w-full h-64 bg-white rounded-3xl flex items-center justify-center border-4 border-dashed border-purple-300 shadow-lg">
-                    <div class="text-center text-purple-500">
-                        <div class="text-6xl mb-3">📸</div>
-                        <p class="text-xl font-semibold">Add Main Hero Photo Here</p>
-                        <p class="text-sm">Happy children learning & playing</p>
-                    </div>
-                </div>
-            </div>
-           
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 px-4 bg-white">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h3 class="text-4xl font-bold text-purple-800 mb-4">About Distinguished Kids</h3>
-                <div class="w-24 h-1 rainbow-gradient mx-auto rounded-full"></div>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h4 class="text-2xl font-semibold text-green-600 mb-4">🌟 Our Mission</h4>
-                    <p class="text-gray-700 mb-6 text-lg">
-                        We believe every child is unique and special. Our mission is to nurture young minds through play-based learning, creativity, and exploration in a safe, loving environment.
-                    </p>
-                    <div class="space-y-3">
-                        <div class="flex items-center space-x-3">
-                            <span class="text-2xl">🎯</span>
-                            <span class="text-gray-700">Individualized learning approach</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="text-2xl">👥</span>
-                            <span class="text-gray-700">Small class sizes for personal attention</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <span class="text-2xl">🏆</span>
-                            <span class="text-gray-700">Experienced, caring teachers</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gradient-to-br from-yellow-200 to-orange-200 p-8 rounded-3xl">
-                    <div class="text-center">
-                        <!-- Picture Space: School Building/Campus -->
-                        <div class="w-full h-48 bg-white rounded-2xl mb-4 flex items-center justify-center border-4 border-dashed border-orange-300">
-                           
-                        </div>
-                        <h5 class="text-xl font-semibold text-orange-800 mb-2">Our Beautiful Campus</h5>
-                        <p class="text-orange-700">
-                            Bright, colorful classrooms designed to inspire creativity and learning, with safe outdoor play areas and modern facilities.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Programs Section -->
-    <section id="programs" class="py-16 px-4 bg-gradient-to-r from-purple-100 to-pink-100">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h3 class="text-4xl font-bold text-purple-800 mb-4">Our Programs</h3>
-                <div class="w-24 h-1 rainbow-gradient mx-auto rounded-full"></div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Preschool Program -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover">
-                    <div class="text-center">
-                        <!-- Picture Space: Preschool Classroom -->
-                        <div class="w-full h-32 bg-red-50 rounded-xl mb-4 flex items-center justify-center border-3 border-dashed border-red-300">
-                            <div class="text-center text-red-500">
-                                <div class="text-2xl mb-1">📸</div>
-                                <p class="text-xs font-semibold">Preschool Photos</p>
-                            </div>
-                        </div>
-                        <div class="text-5xl mb-4">🎨</div>
-                        <h4 class="text-2xl font-bold text-red-600 mb-4">Preschool (3-4 years)</h4>
-                        <p class="text-gray-700 mb-6">
-                            Creative play, early literacy, social skills, and art exploration in a nurturing environment.
-                        </p>
-                        <div class="space-y-2 text-left">
-                            <div class="flex items-center space-x-2">
-                                <span class="text-green-500">✓</span>
-                                <span class="text-sm">Art & Craft Activities</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-green-500">✓</span>
-                                <span class="text-sm">Story Time & Reading</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-green-500">✓</span>
-                                <span class="text-sm">Music & Movement</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pre-K Program -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover">
-                    <div class="text-center">
-                        <!-- Picture Space: Pre-K Classroom -->
-                        <div class="w-full h-32 bg-blue-50 rounded-xl mb-4 flex items-center justify-center border-3 border-dashed border-blue-300">
-                            <div class="text-center text-blue-500">
-                                <div class="text-2xl mb-1">📸</div>
-                                <p class="text-xs font-semibold">Pre-K Photos</p>
-                            </div>
-                        </div>
-                        <div class="text-5xl mb-4">📚</div>
-                        <h4 class="text-2xl font-bold text-blue-600 mb-4">Pre-K (4-5 years)</h4>
-                        <p class="text-gray-700 mb-6">
-                            School readiness program focusing on early math, writing, and social-emotional development.
-                        </p>
-                        <div class="space-y-2 text-left">
-                            <div class="flex items-center space-x-2">
-                                <span class="text-green-500">✓</span>
-                                <span class="text-sm">Letter & Number Recognition</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-green-500">✓</span>
-                                <span class="text-sm">Science Experiments</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-green-500">✓</span>
-                                <span class="text-sm">Problem Solving Skills</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kindergarten Program -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover">
-                    <div class="text-center">
-                        <!-- Picture Space: Kindergarten Classroom -->
-                        <div class="w-full h-32 bg-green-50 rounded-xl mb-4 flex items-center justify-center border-3 border-dashed border-green-300">
-                            <div class="text-center text-green-500">
-                                <div class="text-2xl mb-1">📸</div>
-                                <p class="text-xs font-semibold">Kindergarten Photos</p>
-                            </div>
-                        </div>
-                        <div class="text-5xl mb-4">🎓</div>
-                        <h4 class="text-2xl font-bold text-green-600 mb-4">Kindergarten (5-6 years)</h4>
-                        <p class="text-gray-700 mb-6">
-                            Comprehensive curriculum preparing children for elementary school success with confidence.
-                        </p>
-                        <div class="space-y-2 text-left">
-                            <div class="flex items-center space-x-2">
-                                <span class="text-green-500">✓</span>
-                                <span class="text-sm">Reading & Writing Skills</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-green-500">✓</span>
-                                <span class="text-sm">Math Fundamentals</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-green-500">✓</span>
-                                <span class="text-sm">Critical Thinking</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Activities Section -->
-    <section class="py-16 px-4 bg-white">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h3 class="text-4xl font-bold text-purple-800 mb-4">Fun Activities</h3>
-                <div class="w-24 h-1 rainbow-gradient mx-auto rounded-full"></div>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="text-center p-6 bg-red-100 rounded-2xl card-hover">
-                    <div class="text-4xl mb-3">🎭</div>
-                    <h5 class="font-semibold text-red-700">Drama & Theater</h5>
-                </div>
-                <div class="text-center p-6 bg-orange-100 rounded-2xl card-hover">
-                    <div class="text-4xl mb-3">🎵</div>
-                    <h5 class="font-semibold text-orange-700">Music & Dance</h5>
-                </div>
-                <div class="text-center p-6 bg-yellow-100 rounded-2xl card-hover">
-                    <div class="text-4xl mb-3">🔬</div>
-                    <h5 class="font-semibold text-yellow-700">Science Fun</h5>
-                </div>
-                <div class="text-center p-6 bg-green-100 rounded-2xl card-hover">
-                    <div class="text-4xl mb-3">🏃</div>
-                    <h5 class="font-semibold text-green-700">Sports & Games</h5>
-                </div>
-                <div class="text-center p-6 bg-blue-100 rounded-2xl card-hover">
-                    <div class="text-4xl mb-3">🧩</div>
-                    <h5 class="font-semibold text-blue-700">Puzzles & Logic</h5>
-                </div>
-                <div class="text-center p-6 bg-indigo-100 rounded-2xl card-hover">
-                    <div class="text-4xl mb-3">🌱</div>
-                    <h5 class="font-semibold text-indigo-700">Gardening</h5>
-                </div>
-                <div class="text-center p-6 bg-purple-100 rounded-2xl card-hover">
-                    <div class="text-4xl mb-3">🍳</div>
-                    <h5 class="font-semibold text-purple-700">Cooking Class</h5>
-                </div>
-                <div class="text-center p-6 bg-pink-100 rounded-2xl card-hover">
-                    <div class="text-4xl mb-3">📖</div>
-                    <h5 class="font-semibold text-pink-700">Story Time</h5>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Meet Our Team Section -->
-    <section id="team" class="py-16 px-4 bg-gradient-to-br from-rose-100 to-pink-100">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h3 class="text-4xl font-bold text-purple-800 mb-4">Meet Our Amazing Team</h3>
-                <div class="w-24 h-1 rainbow-gradient mx-auto rounded-full"></div>
-                <p class="text-lg text-gray-700 mt-4">The caring hearts and brilliant minds behind Distinguished Kids!</p>
-            </div>
-            
-            <!-- Owner/Founder Section -->
-            <div class="bg-white rounded-3xl p-8 shadow-lg mb-12 max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div class="text-center">
-                        <!-- Picture Space: Owner Photo -->
-                        <div class="w-48 h-48 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full mx-auto mb-4 flex items-center justify-center border-4 border-dashed border-purple-400 shadow-lg">
-                            <div class="text-center text-purple-600">
-                                <div class="text-4xl mb-2">📸</div>
-                                <p class="font-semibold">Owner Photo</p>
-                                <p class="text-xs">Professional headshot</p>
-                            </div>
-                        </div>
-                        <div class="text-4xl mb-2">👑</div>
-                        <h4 class="text-2xl font-bold text-purple-700">Founder & Director</h4>
-                    </div>
-                    <div>
-                        <h4 class="text-3xl font-bold text-pink-600 mb-4">Pastor Bongi Makhavhu</h4>
-                        <p class="text-lg text-gray-700 mb-4">
-                            "Every child deserves to feel special, loved, and excited about learning. That's the vision that inspired me to create Distinguished Kids."
-                        </p>
-                         
-                        <div class="mt-6 p-4 bg-pink-50 rounded-xl">
-                            <p class="text-pink-800 italic">
-                                "I started Distinguished Kids because I believe every child has unique gifts waiting to be discovered. Our mission is to nurture those gifts with love, patience, and joy!"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Teachers Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Teacher 1 -->
-                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover">
-                    <div class="text-center">
-                        <!-- Picture Space: Teacher Photo -->
-                        <div class="w-32 h-32 bg-gradient-to-br from-blue-200 to-cyan-200 rounded-full mx-auto mb-4 flex items-center justify-center border-3 border-dashed border-blue-400">
-                            <div class="text-center text-blue-600">
-                                <div class="text-2xl mb-1">📸</div>
-                                <p class="text-xs font-semibold">Teacher Photo</p>
-                            </div>
-                        </div>
-                        <h4 class="text-xl font-bold text-blue-600 mb-2">Miss Emily Chen</h4>
-                        <p class="text-blue-500 font-semibold mb-3">Preschool Lead Teacher</p>
-                        <p class="text-gray-700 text-sm mb-4">
-                            Specializes in creative arts and sensory learning. Emily makes every day magical with her endless energy and creativity!
-                        </p>
-                       
-                    </div>
-                </div>
-
-                <!-- Teacher 2 -->
-                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover">
-                    <div class="text-center">
-                        <!-- Picture Space: Teacher Photo -->
-                        <div class="w-32 h-32 bg-gradient-to-br from-green-200 to-emerald-200 rounded-full mx-auto mb-4 flex items-center justify-center border-3 border-dashed border-green-400">
-                            <div class="text-center text-green-600">
-                                <div class="text-2xl mb-1">📸</div>
-                                <p class="text-xs font-semibold">Teacher Photo</p>
-                            </div>
-                        </div>
-                        <h4 class="text-xl font-bold text-green-600 mb-2">Mr. David Rodriguez</h4>
-                        <p class="text-green-500 font-semibold mb-3">Pre-K Lead Teacher</p>
-                        <p class="text-gray-700 text-sm mb-4">
-                            Our science and nature expert! David brings the outdoors inside and makes learning about the world exciting and hands-on.
-                        </p>
-                       
-                    </div>
-                </div>
-
-                <!-- Teacher 3 -->
-                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover">
-                    <div class="text-center">
-                        <!-- Picture Space: Teacher Photo -->
-                        <div class="w-32 h-32 bg-gradient-to-br from-purple-200 to-violet-200 rounded-full mx-auto mb-4 flex items-center justify-center border-3 border-dashed border-purple-400">
-                            <div class="text-center text-purple-600">
-                                <div class="text-2xl mb-1">📸</div>
-                                <p class="text-xs font-semibold">Teacher Photo</p>
-                            </div>
-                        </div>
-                        <h4 class="text-xl font-bold text-purple-600 mb-2">Mrs. Lisa Thompson</h4>
-                        <p class="text-purple-500 font-semibold mb-3">Kindergarten Lead Teacher</p>
-                        <p class="text-gray-700 text-sm mb-4">
-                            Reading and writing specialist who makes letters and numbers come alive! Lisa prepares our kids for elementary school with confidence.
-                        </p>
-                       
-                    </div>
-                </div>
-
-                <!-- Teacher 4 -->
-                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover">
-                    <div class="text-center">
-                        <!-- Picture Space: Teacher Photo -->
-                        <div class="w-32 h-32 bg-gradient-to-br from-orange-200 to-yellow-200 rounded-full mx-auto mb-4 flex items-center justify-center border-3 border-dashed border-orange-400">
-                            <div class="text-center text-orange-600">
-                                <div class="text-2xl mb-1">📸</div>
-                                <p class="text-xs font-semibold">Teacher Photo</p>
-                            </div>
-                        </div>
-                        <h4 class="text-xl font-bold text-orange-600 mb-2">Miss Maria Santos</h4>
-                        <p class="text-orange-500 font-semibold mb-3">Music & Movement Teacher</p>
-                        <p class="text-gray-700 text-sm mb-4">
-                            Brings joy through music and dance! Maria teaches Spanish, leads our choir, and gets everyone moving to the rhythm of learning.
-                        </p>
-                       
-                    </div>
-                </div>
-
-                <!-- Teacher 5 -->
-                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover">
-                    <div class="text-center">
-                        <!-- Picture Space: Teacher Photo -->
-                        <div class="w-32 h-32 bg-gradient-to-br from-red-200 to-pink-200 rounded-full mx-auto mb-4 flex items-center justify-center border-3 border-dashed border-red-400">
-                            <div class="text-center text-red-600">
-                                <div class="text-2xl mb-1">📸</div>
-                                <p class="text-xs font-semibold">Teacher Photo</p>
-                            </div>
-                        </div>
-                        <h4 class="text-xl font-bold text-red-600 mb-2">Mrs. Jennifer Kim</h4>
-                        <p class="text-red-500 font-semibold mb-3">Assistant Director & Special Needs Coordinator</p>
-                        <p class="text-gray-700 text-sm mb-4">
-                            Ensures every child gets the support they need to thrive. Jennifer's patience and expertise help all children reach their potential.
-                        </p>
-                       
-                    </div>
-                </div>
-
-                <!-- Teacher 6 -->
-                <div class="bg-white rounded-3xl p-6 shadow-lg card-hover">
-                    <div class="text-center">
-                        <!-- Picture Space: Teacher Photo -->
-                        <div class="w-32 h-32 bg-gradient-to-br from-teal-200 to-cyan-200 rounded-full mx-auto mb-4 flex items-center justify-center border-3 border-dashed border-teal-400">
-                            <div class="text-center text-teal-600">
-                                <div class="text-2xl mb-1">📸</div>
-                                <p class="text-xs font-semibold">Teacher Photo</p>
-                            </div>
-                        </div>
-                        <h4 class="text-xl font-bold text-teal-600 mb-2">Mr. Alex Johnson</h4>
-                        <p class="text-teal-500 font-semibold mb-3">Physical Education & Outdoor Learning</p>
-                        <p class="text-gray-700 text-sm mb-4">
-                            Gets kids moving and exploring! Alex leads our outdoor adventures, sports activities, and teaches kids about healthy living.
-                        </p>
-                       
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Team Values -->
-            <div class="mt-12 bg-white rounded-3xl p-8 shadow-lg">
-                <h4 class="text-2xl font-bold text-center text-purple-800 mb-6">What Makes Our Team Special</h4>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="text-center p-4">
-                        <div class="text-4xl mb-3">💝</div>
-                        <h5 class="font-bold text-pink-600 mb-2">Passionate & Caring</h5>
-                        <p class="text-gray-700 text-sm">Every teacher genuinely loves working with children and treats each child like their own.</p>
-                    </div>
-                    <div class="text-center p-4">
-                        <div class="text-4xl mb-3">🎓</div>
-                        <h5 class="font-bold text-blue-600 mb-2">Highly Qualified</h5>
-                        <p class="text-gray-700 text-sm">All our teachers have degrees in education and continue professional development training.</p>
-                    </div>
-                    <div class="text-center p-4">
-                        <div class="text-4xl mb-3">🌟</div>
-                        <h5 class="font-bold text-green-600 mb-2">Creative & Fun</h5>
-                        <p class="text-gray-700 text-sm">We believe learning should be joyful! Our teachers make every lesson an exciting adventure.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Photo Gallery Section -->
-    <section class="py-16 px-4 bg-gradient-to-br from-indigo-100 to-purple-100">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h3 class="text-4xl font-bold text-purple-800 mb-4">Our Happy Moments</h3>
-                <div class="w-24 h-1 rainbow-gradient mx-auto rounded-full"></div>
-                <p class="text-lg text-gray-700 mt-4">Capturing the joy, laughter, and learning that happens every day!</p>
-            </div>
-            
-            <!-- Photo Gallery Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 auto-rows-max">
-                <!-- Large Photo Space 1 -->
-                <div class="col-span-2 row-span-2">
-                    <div class="w-full h-64 bg-white rounded-2xl flex items-center justify-center border-4 border-dashed border-pink-300 shadow-lg card-hover">
-                        <div class="text-center text-pink-500">
-                            <div class="text-4xl mb-2">📸</div>
-                            <p class="font-semibold">Classroom Fun</p>
-                            <p class="text-xs">Large group activities</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Medium Photo Space 1 -->
-                <div class="col-span-1 row-span-1">
-                    <div class="w-full h-32 bg-white rounded-xl flex items-center justify-center border-3 border-dashed border-blue-300 shadow-md card-hover">
-                        <div class="text-center text-blue-500">
-                            <div class="text-2xl mb-1">📸</div>
-                            <p class="text-xs font-semibold">Art Time</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Medium Photo Space 2 -->
-                <div class="col-span-1 row-span-1">
-                    <div class="w-full h-32 bg-white rounded-xl flex items-center justify-center border-3 border-dashed border-green-300 shadow-md card-hover">
-                        <div class="text-center text-green-500">
-                            <div class="text-2xl mb-1">📸</div>
-                            <p class="text-xs font-semibold">Reading</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Small Photo Space 1 -->
-                <div class="col-span-1 row-span-1">
-                    <div class="w-full h-24 bg-white rounded-lg flex items-center justify-center border-2 border-dashed border-purple-300 shadow-sm card-hover">
-                        <div class="text-center text-purple-500">
-                            <div class="text-xl">📸</div>
-                            <p class="text-xs">Play</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Small Photo Space 2 -->
-                <div class="col-span-1 row-span-1">
-                    <div class="w-full h-24 bg-white rounded-lg flex items-center justify-center border-2 border-dashed border-orange-300 shadow-sm card-hover">
-                        <div class="text-center text-orange-500">
-                            <div class="text-xl">📸</div>
-                            <p class="text-xs">Snack</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Medium Photo Space 3 -->
-                <div class="col-span-1 row-span-1">
-                    <div class="w-full h-32 bg-white rounded-xl flex items-center justify-center border-3 border-dashed border-yellow-300 shadow-md card-hover">
-                        <div class="text-center text-yellow-600">
-                            <div class="text-2xl mb-1">📸</div>
-                            <p class="text-xs font-semibold">Science</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Medium Photo Space 4 -->
-                <div class="col-span-1 row-span-1">
-                    <div class="w-full h-32 bg-white rounded-xl flex items-center justify-center border-3 border-dashed border-red-300 shadow-md card-hover">
-                        <div class="text-center text-red-500">
-                            <div class="text-2xl mb-1">📸</div>
-                            <p class="text-xs font-semibold">Music</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Large Photo Space 2 -->
-                <div class="col-span-2 row-span-2">
-                    <div class="w-full h-64 bg-white rounded-2xl flex items-center justify-center border-4 border-dashed border-indigo-300 shadow-lg card-hover">
-                        <div class="text-center text-indigo-500">
-                            <div class="text-4xl mb-2">📸</div>
-                            <p class="font-semibold">Outdoor Play</p>
-                            <p class="text-xs">Playground adventures</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Small Photo Space 3 -->
-                <div class="col-span-1 row-span-1">
-                    <div class="w-full h-24 bg-white rounded-lg flex items-center justify-center border-2 border-dashed border-teal-300 shadow-sm card-hover">
-                        <div class="text-center text-teal-500">
-                            <div class="text-xl">📸</div>
-                            <p class="text-xs">Lunch</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Medium Photo Space 5 -->
-                <div class="col-span-1 row-span-1">
-                    <div class="w-full h-32 bg-white rounded-xl flex items-center justify-center border-3 border-dashed border-rose-300 shadow-md card-hover">
-                        <div class="text-center text-rose-500">
-                            <div class="text-2xl mb-1">📸</div>
-                            <p class="text-xs font-semibold">Crafts</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Small Photo Space 4 -->
-                <div class="col-span-1 row-span-1">
-                    <div class="w-full h-24 bg-white rounded-lg flex items-center justify-center border-2 border-dashed border-cyan-300 shadow-sm card-hover">
-                        <div class="text-center text-cyan-500">
-                            <div class="text-xl">📸</div>
-                            <p class="text-xs">Friends</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Medium Photo Space 6 -->
-                <div class="col-span-1 row-span-1">
-                    <div class="w-full h-32 bg-white rounded-xl flex items-center justify-center border-3 border-dashed border-emerald-300 shadow-md card-hover">
-                        <div class="text-center text-emerald-500">
-                            <div class="text-2xl mb-1">📸</div>
-                            <p class="text-xs font-semibold">Events</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-8">
-                <p class="text-gray-600 mb-4">Want to see more photos? Follow us on social media!</p>
-                <div class="space-x-4">
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full font-semibold transition-colors">
-                        📘 Facebook Gallery
-                    </button>
-                    <button class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full font-semibold transition-colors">
-                        📷 Instagram Photos
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-4 bg-gradient-to-br from-blue-100 to-purple-100">
-        <div class="container mx-auto">
-            <div class="text-center mb-12">
-                <h3 class="text-4xl font-bold text-purple-800 mb-4">Get in Touch</h3>
-                <div class="w-24 h-1 rainbow-gradient mx-auto rounded-full"></div>
-            </div>
-            <div class="grid md:grid-cols-1 gap-12">
-                <div class="bg-white rounded-3xl p-8 shadow-lg ">
-                    <h4 class="text-2xl font-bold text-green-600 mb-6">Contact Information</h4>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="text-2xl">📍</div>
-                            <div>
-                                <p class="font-semibold">Address</p>
-                                <p class="text-gray-600">123 Rainbow Lane, Sunshine City, SC 12345</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="text-2xl">📞</div>
-                            <div>
-                                <p class="font-semibold">Phone</p>
-                                <p class="text-gray-600">(555) 123-KIDS</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="text-2xl">✉️</div>
-                            <div>
-                                <p class="font-semibold">Email</p>
-                                <p class="text-gray-600">hello@distinguishedkids.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="text-2xl">🕐</div>
-                            <div>
-                                <p class="font-semibold">Hours</p>
-                                <p class="text-gray-600">Monday - Friday: 7:00 AM - 6:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="rainbow-gradient text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <div class="flex justify-center items-center space-x-3 mb-6">
-                    <div class="text-4xl">📚</div>
-                    <h2 class="text-3xl font-bold">Distinguished Kids</h2>
-                </div>
-                <p class="text-lg mb-6">Where every child shines bright like a rainbow! ✨</p>
-                <div class="flex justify-center space-x-6 mb-6">
-                    <a href="#" class="hover:text-yellow-200 transition-colors">📘 Facebook</a>
-
-                </div>
-                <p class="text-sm opacity-80">© 2025 Distinguished Kids. All rights reserved. Made with 💖 for amazing kids!</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DistinguishedKids</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Nunito:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    .font-heading {
+      font-family: 'Fredoka', sans-serif;
+    }
+    .font-body {
+      font-family: 'Nunito', sans-serif;
+    }
+    .blob-shape {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    .wave-divider {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .wave-divider svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 60px;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes bounce-gentle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    .animate-bounce-gentle {
+      animation: bounce-gentle 2s ease-in-out infinite;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+    .activity-card:hover {
+      transform: translateY(-8px) rotate(1deg);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-body">
+  <div id="app-wrapper" class="w-full h-full overflow-auto"><!-- Navigation -->
+   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex justify-between items-center h-16">
+      <div class="flex items-center gap-2">
+       <div class="w-10 h-10 rounded-full flex items-center justify-center text-2xl" style="background-color: #FFE066;">
+        ☀️
+       </div><span id="nav-school-name" class="font-heading font-bold text-xl" style="color: #2D3436;">DistinguishedKids</span>
+      </div>
+      <div id="nav-menu" class="hidden md:flex items-center gap-8"><a href="#about" class="font-medium transition-colors hover:opacity-80" style="color: #6C5CE7;">About</a> 
+        <a href="#activities" class="font-medium transition-colors hover:opacity-80" style="color: #6C5CE7;">Activities</a> <a href="#gallery" class="font-medium transition-colors hover:opacity-80" style="color: #6C5CE7;">Gallery</a>
+         <a href="#testimonials" class="font-medium transition-colors hover:opacity-80" style="color: #6C5CE7;">Testimonials</a> 
+      </div>
+      <button id="hamburger-btn" class="md:hidden text-2xl font-bold" style="color: #2D3436;">☰</button>
+     </div><!-- Mobile Menu -->
+     <div id="mobile-menu" class="hidden md:hidden pb-4 border-t border-gray-200"><a href="#about" class="block py-2 px-4 font-medium transition-colors hover:opacity-80" style="color: #6C5CE7;">About</a> 
+        <a href="#activities" class="block py-2 px-4 font-medium transition-colors hover:opacity-80" style="color: #6C5CE7;">Activities</a> <a href="#gallery" class="block py-2 px-4 font-medium transition-colors hover:opacity-80" style="color: #6C5CE7;">Gallery</a> 
+        <a href="#testimonials" class="block py-2 px-4 font-medium transition-colors hover:opacity-80" style="color: #6C5CE7;">Testimonials</a> 
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section class="relative min-h-screen pt-16 overflow-hidden" style="background: linear-gradient(135deg, #FFF5E6 0%, #FFE6F0 50%, #E6F0FF 100%);">
+    <div class="absolute top-20 left-10 w-20 h-20 blob-shape animate-float opacity-60" style="background-color: #FFE066; animation-delay: 0s;"></div>
+    <div class="absolute top-40 right-20 w-16 h-16 blob-shape animate-float opacity-60" style="background-color: #FF6B6B; animation-delay: 0.5s;"></div>
+    <div class="absolute bottom-40 left-20 w-24 h-24 blob-shape animate-float opacity-60" style="background-color: #6C5CE7; animation-delay: 1s;"></div>
+    <div class="absolute top-60 right-40 w-12 h-12 blob-shape animate-float opacity-60" style="background-color: #00D9A5; animation-delay: 1.5s;"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+     <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="text-center lg:text-left">
       
-    </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9807db6294bc73f9',t:'MTc1ODEwNDI3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+       <h1 id="hero-title" class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style="color: #2D3436;">Where Little <span style="color: #FF6B6B;">Dreams</span> Take <span style="color: #6C5CE7;">Flight</span></h1>
+       <p id="hero-tagline" class="text-lg sm:text-xl mb-8 leading-relaxed" style="color: #636E72;">Nurturing curious minds and creative hearts in a warm, playful environment where every child is celebrated for who they are.</p>
+      
+      </div>
+      <div class="relative">
+       <div class="relative w-full aspect-square max-w-md mx-auto">
+        <div class="absolute inset-0 blob-shape" style="background: linear-gradient(135deg, #FFE066 0%, #FF6B6B 100%);"></div>
+        <div class="absolute inset-4 blob-shape flex items-center justify-center" style="background-color: white;">
+         <div class="text-center p-8">
+          <div class="text-8xl mb-4">
+           👶🎨📚
+          </div>
+          <p class="font-heading font-bold text-2xl" style="color: #2D3436;">Learning Through Play</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="wave-divider">
+     <svg viewbox="0 0 1200 120" preserveaspectratio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C57.1,118.92,147.26,89.15,321.39,56.44Z" fill="#ffffff"></path>
+     </svg>
+    </div>
+   </section><!-- About Section -->
+   <section id="about" class="py-20 lg:py-32" style="background-color: #ffffff;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16"><span class="inline-block px-4 py-2 rounded-full text-sm font-bold mb-4" style="background-color: #E6F0FF; color: #6C5CE7;">About Us</span>
+      <h2 id="about-title" class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-6" style="color: #2D3436;">A Place Where Children <span style="color: #FF6B6B;">Thrive</span></h2>
+      <p id="about-description" class="text-lg max-w-3xl mx-auto leading-relaxed" style="color: #636E72;"> A Daycare with Excellence is a warm, caring preschool that provides a clean, safe, and friendly environment where children feel secure and happy. We admit children from 6 months to 6 years, offering quality care and early learning that supports their growth and development. Our focus is on nurturing confident, curious, and capable children as we help shape smart, strong future leaders through love, guidance, and excellence in early childhood education.</p>
+     </div>
+    </div>
+   </section> <!-- Stats Section -->
+   <section class="py-20 relative overflow-hidden" style="background: linear-gradient(135deg, #6C5CE7 0%, #a855f7 100%);">
+    <div class="absolute inset-0 opacity-10">
+     <div class="absolute top-10 left-10 text-9xl">
+      ⭐
+     </div>
+     <div class="absolute bottom-10 right-10 text-9xl">
+      🌟
+     </div>
+     <div class="absolute top-1/2 left-1/4 text-7xl">
+      ✨
+     </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="stat-card text-center p-6 rounded-3xl transition-all duration-300" style="background-color: rgba(255,255,255,0.15); backdrop-filter: blur(10px);">
+       <div class="font-heading text-4xl sm:text-5xl font-bold text-white mb-2">
+        10+
+       </div>
+       <div class="text-white/80 font-medium">
+        Years of Excellence
+       </div>
+      </div>
+      <div class="stat-card text-center p-6 rounded-3xl transition-all duration-300" style="background-color: rgba(255,255,255,0.15); backdrop-filter: blur(10px);">
+       <div class="font-heading text-4xl sm:text-5xl font-bold text-white mb-2">
+        200+
+       </div>
+       <div class="text-white/80 font-medium">
+        Happy Graduates
+       </div>
+      </div>
+      <div class="stat-card text-center p-6 rounded-3xl transition-all duration-300" style="background-color: rgba(255,255,255,0.15); backdrop-filter: blur(10px);">
+       <div class="font-heading text-4xl sm:text-5xl font-bold text-white mb-2">
+        10+
+       </div>
+       <div class="text-white/80 font-medium">
+        Qualified Teachers
+       </div>
+      </div>
+      <div class="stat-card text-center p-6 rounded-3xl transition-all duration-300" style="background-color: rgba(255,255,255,0.15); backdrop-filter: blur(10px);">
+       <div class="font-heading text-4xl sm:text-5xl font-bold text-white mb-2">
+        98%
+       </div>
+       <div class="text-white/80 font-medium">
+        Parent Satisfaction
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Activities Section -->
+   <section id="activities" class="py-20 lg:py-32" style="background-color: #FFF9F0;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16"><span class="inline-block px-4 py-2 rounded-full text-sm font-bold mb-4" style="background-color: #FFE066; color: #2D3436;">Our Programs</span>
+      <h2 id="activities-title" class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-6" style="color: #2D3436;">Fun-Filled <span style="color: #6C5CE7;">Activities</span></h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: #636E72;">Every day is an adventure! Our diverse activities spark imagination and build essential skills.</p>
+     </div>
+     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="activity-card p-6 rounded-3xl shadow-lg transition-all duration-300" style="background-color: white;">
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4" style="background-color: #FF6B6B;">
+        🎨
+       </div>
+       <h3 class="font-heading font-bold text-xl mb-3" style="color: #2D3436;">Arts &amp; Crafts</h3>
+       <p class="mb-4" style="color: #636E72;">Express creativity through painting, drawing, sculpting, and various hands-on art projects.</p>
+       
+      </div>
+      <div class="activity-card p-6 rounded-3xl shadow-lg transition-all duration-300" style="background-color: white;">
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4" style="background-color: #6C5CE7;">
+        📚
+       </div>
+       <h3 class="font-heading font-bold text-xl mb-3" style="color: #2D3436;">Storytime</h3>
+       <p class="mb-4" style="color: #636E72;">Interactive storytelling sessions that build vocabulary, comprehension, and a love for books.</p>
+     
+      </div>
+      <div class="activity-card p-6 rounded-3xl shadow-lg transition-all duration-300" style="background-color: white;">
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4" style="background-color: #00D9A5;">
+        🎵
+       </div>
+       <h3 class="font-heading font-bold text-xl mb-3" style="color: #2D3436;">Music &amp; Movement</h3>
+       <p class="mb-4" style="color: #636E72;">We also run weekly Zumba classes, making learning fun while improving coordination, fitness, and social interaction.</p>
+       
+      </div>
+      <div class="activity-card p-6 rounded-3xl shadow-lg transition-all duration-300" style="background-color: white;">
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4" style="background-color: #FFE066;">
+        🧠
+       </div>
+       <h3 class="font-heading font-bold text-xl mb-3" style="color: #2D3436;">Developmental Activities</h3>
+       <p class="mb-4" style="color: #636E72;">Fun experiments and building activities that introduce science, math, and problem-solving.</p>
+       
+      </div>
+      <div class="activity-card p-6 rounded-3xl shadow-lg transition-all duration-300" style="background-color: white;">
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4" style="background-color: #FF6B6B;">
+        🌳
+       </div>
+       <h3 class="font-heading font-bold text-xl mb-3" style="color: #2D3436;">Outdoor Play</h3>
+       <p class="mb-4" style="color: #636E72;">Safe playground time, nature walks, and gardening to connect with the outdoors.</p>
+       
+      </div>
+      <div class="activity-card p-6 rounded-3xl shadow-lg transition-all duration-300" style="background-color: white;">
+       <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4" style="background-color: #6C5CE7;">
+        🤝 
+       </div>
+       <h3 class="font-heading font-bold text-xl mb-3" style="color: #2D3436;">Social Activities</h3>
+       <p class="mb-4" style="color: #636E72;">We help children develop confidence, communication, and positive relationships</p>
+      
+      </div>
+     </div>
+    </div>
+   </section><!-- Gallery Section -->
+   <section id="gallery" class="py-20 lg:py-32" style="background-color: white;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16"><span class="inline-block px-4 py-2 rounded-full text-sm font-bold mb-4" style="background-color: #FFE6F0; color: #FF6B6B;">Gallery</span>
+      <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-6" style="color: #2D3436;">Moments of <span style="color: #FFE066;">Joy</span></h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: #636E72;">A glimpse into the magical moments happening every day at Distinguished Kids Academy.</p>
+     </div>
+     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div id="gallery-item-1" class="gallery-item relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" style="background: linear-gradient(135deg, #FFE066 0%, #FF6B6B 100%);"><img id="gallery-img-1" src="https://images.unsplash.com/photo-1503454537688-e6694d91d4a9?w=400&amp;h=400&amp;fit=crop" alt="Gallery 1" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed:', this.src); this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #FFE066 0%, #FF6B6B 100%)';">
+      
+      </div>
+      <div id="gallery-item-2" class="gallery-item relative aspect-square rounded-2xl overflow-hidden group cursor-pointer md:col-span-2 md:row-span-2" style="background: linear-gradient(135deg, #6C5CE7 0%, #a855f7 100%);"><img id="gallery-img-2" src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&amp;h=800&amp;fit=crop" alt="Gallery 2" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed:', this.src); this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #6C5CE7 0%, #a855f7 100%)';">
+      </div>
+      <div id="gallery-item-3" class="gallery-item relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" style="background: linear-gradient(135deg, #00D9A5 0%, #00b386 100%);"><img id="gallery-img-3" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&amp;h=400&amp;fit=crop" alt="Gallery 3" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed:', this.src); this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #00D9A5 0%, #00b386 100%)';">
+      </div>
+      <div id="gallery-item-4" class="gallery-item relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" style="background: linear-gradient(135deg, #FF6B6B 0%, #ff8f8f 100%);"><img id="gallery-img-4" src="https://images.unsplash.com/photo-1507842931343-583f20917936?w=400&amp;h=400&amp;fit=crop" alt="Gallery 4" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed:', this.src); this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #FF6B6B 0%, #ff8f8f 100%)';">
+      </div>
+      <div id="gallery-item-5" class="gallery-item relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" style="background: linear-gradient(135deg, #FFE066 0%, #ffd11a 100%);"><img id="gallery-img-5" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&amp;h=400&amp;fit=crop" alt="Gallery 5" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed:', this.src); this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #FFE066 0%, #ffd11a 100%)';">
+      </div>
+      <div id="gallery-item-6" class="gallery-item relative aspect-square rounded-2xl overflow-hidden group cursor-pointer col-span-2" style="background: linear-gradient(135deg, #FFE6F0 0%, #FF6B6B 100%);"><img id="gallery-img-6" src="https://images.unsplash.com/photo-1503454537688-e6694d91d4a9?w=800&amp;h=400&amp;fit=crop" alt="Gallery 6" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed:', this.src); this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #FFE6F0 0%, #FF6B6B 100%)';">
+      </div>
+      <div id="gallery-item-7" class="gallery-item relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" style="background: linear-gradient(135deg, #E6F0FF 0%, #6C5CE7 100%);"><img id="gallery-img-7" src="https://images.unsplash.com/photo-1606728517818-a6ecaf15d870?w=400&amp;h=400&amp;fit=crop" alt="Gallery 7" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed:', this.src); this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #E6F0FF 0%, #6C5CE7 100%)';">
+      </div>
+      <div id="gallery-item-8" class="gallery-item relative aspect-square rounded-2xl overflow-hidden group cursor-pointer" style="background: linear-gradient(135deg, #00D9A5 0%, #FFE066 100%);"><img id="gallery-img-8" src="https://images.unsplash.com/photo-1503454537688-e6694d91d4a9?w=400&amp;h=400&amp;fit=crop" alt="Gallery 8" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed:', this.src); this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #00D9A5 0%, #FFE066 100%)';">
+      </div>
+     </div>
+    </div>
+   </section><!-- Testimonials Section -->
+   <section id="testimonials" class="py-20 lg:py-32" style="background: linear-gradient(135deg, #FFF5E6 0%, #FFE6F0 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16"><span class="inline-block px-4 py-2 rounded-full text-sm font-bold mb-4" style="background-color: #6C5CE7; color: white;">Testimonials</span>
+      <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-6" style="color: #2D3436;">What <span style="color: #FF6B6B;">Parents</span> Say</h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: #636E72;">Hear from our wonderful community of families.</p>
+     </div>
+     <div class="relative max-w-2xl mx-auto"><!-- Carousel Container -->
+      <div class="overflow-hidden rounded-3xl">
+       <div id="testimonials-carousel" class="flex transition-transform duration-500 ease-out"><!-- Testimonial 1 -->
+        <div class="w-full flex-shrink-0 p-8 rounded-3xl shadow-lg relative" style="background-color: white;">
+         <div class="absolute -top-4 left-8 text-5xl">
+        
+         </div>
+         <div class="flex items-center gap-1 mb-4 pt-4" style="color: #FFE066;"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+         </div>
+         <p class="mb-6 text-lg italic" style="color: #636E72;">"The transformation in my daughter has been incredible. She's more confident, creative, and can't wait to go to school every morning!"</p>
+         <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl" style="background-color: #FFE6F0;">
+           
+          </div>
+          <div>
+           <div class="font-bold" style="color: #2D3436;">
+            Sarah Mitchell
+           </div>
+           <div class="text-sm" style="color: #636E72;">
+            Parent of Emma, Age 4
+           </div>
+          </div>
+         </div>
+        </div><!-- Testimonial 2 -->
+        <div class="w-full flex-shrink-0 p-8 rounded-3xl shadow-lg relative" style="background-color: white;">
+         <div class="absolute -top-4 left-8 text-5xl">
+          
+         </div>
+         <div class="flex items-center gap-1 mb-4 pt-4" style="color: #FFE066;"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+         </div>
+         <p class="mb-6 text-lg italic" style="color: #636E72;">"The teachers genuinely care about each child. My daughter has learned so much and made amazing friends. Best decision we ever made!"</p>
+         <div class="flex items-center gap-4">
+         
+          <div>
+           <div class="font-bold" style="color: #2D3436;">
+            Pheello Motsoikha
+           </div>
+           <div class="text-sm" style="color: #636E72;">
+            Parent of Lesedi, Age 3
+           </div>
+          </div>
+         </div>
+        </div><!-- Testimonial 3 -->
+        <div class="w-full flex-shrink-0 p-8 rounded-3xl shadow-lg relative" style="background-color: white;">
+         <div class="absolute -top-4 left-8 text-5xl">
+        
+         </div>
+         <div class="flex items-center gap-1 mb-4 pt-4" style="color: #FFE066;"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+         </div>
+         <p class="mb-6 text-lg italic" style="color: #636E72;">"Both my kids attended Sunshine and both thrived. The curriculum prepares them perfectly for kindergarten while keeping learning fun."</p>
+         <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center text-2xl" style="background-color: #FFF5E6;">
+          
+          </div>
+          <div>
+           <div class="font-bold" style="color: #2D3436;">
+            Jennifer Rodriguez
+           </div>
+           <div class="text-sm" style="color: #636E72;">
+            Parent of Mia &amp; Noah
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Navigation Buttons -->
+      <div class="flex justify-center items-center gap-6 mt-8"><button id="prev-testimonial" class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl transition-all hover:shadow-lg hover:scale-110" style="background-color: #FF6B6B; color: white;"> ‹ </button> <!-- Dot Indicators -->
+       <div class="flex gap-2"><button class="carousel-dot w-3 h-3 rounded-full transition-all active" style="background-color: #FF6B6B;" data-index="0"></button> <button class="carousel-dot w-3 h-3 rounded-full transition-all" style="background-color: #6C5CE7;" data-index="1"></button> <button class="carousel-dot w-3 h-3 rounded-full transition-all" style="background-color: #FFE066;" data-index="2"></button>
+       </div><button id="next-testimonial" class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl transition-all hover:shadow-lg hover:scale-110" style="background-color: #FF6B6B; color: white;"> › </button>
+      </div>
+     </div>
+    </div>
+   </section><!-- CTA Section -->
+   <section class="py-20" style="background: linear-gradient(135deg, #FF6B6B 0%, #ff8f8f 100%);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+     <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Join Our Family?</h2>
+    </div>
+   </section><!-- Footer -->
+   <footer style="background-color: #2D3436; color: white;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+     <div class="grid md:grid-cols-4 gap-12 mb-12">
+      <div>
+       <div class="flex items-center gap-2 mb-6">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center text-2xl" style="background-color: #FFE066;">
+         🌻
+        </div>
+        <span id="footer-school-name" class="font-heading font-bold text-xl">Distinguished Kids Academy </span>
+       </div>
+       <p class="text-white/70 mb-6">A DAYCARE WITH EXCELLENCE.</p>
+       <div class="flex gap-4"><a id="facebook-link" href="#" class="w-10 h-10 rounded-full flex items-center justify-center transition-colors hover:opacity-80" style="background-color: #6C5CE7;" target="_blank" rel="noopener noreferrer" title="Facebook"> f </a> 
+         </div>
+      </div>
+      <div>
+       <h4 class="font-heading font-bold text-lg mb-6">Quick Links</h4>
+       <ul class="space-y-3">
+        <li><a href="#about" class="text-white/70 hover:text-white transition-colors">About Us</a></li>
+        <li><a href="#activities" class="text-white/70 hover:text-white transition-colors">Programs</a></li>
+        <li><a href="#gallery" class="text-white/70 hover:text-white transition-colors">Gallery</a></li>
+        <li><a href="#testimonials" class="text-white/70 hover:text-white transition-colors">Testimonials</a></li>
+       </ul>
+      </div>
+     
+      <div>
+       <h4 class="font-heading font-bold text-lg mb-6">Contact Info</h4>
+       <ul class="space-y-3 text-white/70">
+        <li class="flex items-start gap-3"><span>📍</span> <span>797 CLOVE DRIVE<br>
+         ZAKARIYYA PARK, EXT 4, 1821 </span></li>
+        <li class="flex items-center gap-3"><span>📞</span> <span>011 859 1030</span></li>
+        <li class="flex items-center gap-3"><span>✉️</span> <span>distinguishedkids@mweb.co.za</span></li>
+        <li class="flex items-center gap-3"><span>🕐</span> <span>Mon-Fri: 7:00 AM - 5:00 PM</span></li>
+       </ul>
+      </div>
+     </div>
+     <div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p id="footer-copyright" class="text-white/60 text-sm">© 2026 Distinguished Kids Academy. All rights reserved. Made with 💛 for little learners.</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      school_name: 'Distinguished Kids Academy',
+      hero_tagline: 'Nurturing curious minds and creative hearts in a warm, playful environment where every child is celebrated for who they are.',
+      about_title: 'A Place Where Children Thrive',
+      about_description: 'A Daycare with Excellence is a warm, caring preschool that provides a clean, safe, and friendly environment where children feel secure and happy. We admit children from 6 months to 6 years, offering quality care and early learning that supports their growth and development. Our focus is on nurturing confident, curious, and capable children as we help shape smart, strong future leaders through love, guidance, and excellence in early childhood education.',
+      activities_title: 'Fun-Filled Activities',
+      gallery_image_1: 'img/01.jpg',
+      gallery_image_2: 'img/2.jpg',
+      gallery_image_3: 'img/02.jpg',
+      gallery_image_4: 'img/4.jpg',
+      gallery_image_5: 'img/5.jpg',
+      gallery_image_6: 'img/6.jpg',
+      gallery_image_7: 'img/7.jpg',
+      gallery_image_8: 'img/8.jpg',
+     facebook_url: 'https://www.facebook.com/profile.php?id=100064082071576',
+      
+      footer_text: '© 2026 Distinguished Kids Academy. All rights reserved. Made with 💛 for little learners.',
+      primary_color: '#FF6B6B',
+      secondary_color: '#6C5CE7',
+      accent_color: '#FFE066',
+      text_color: '#2D3436',
+      background_color: '#FFF5E6',
+      font_family: 'Fredoka',
+      font_size: 16
+    };
+
+    let config = { ...defaultConfig };
+
+    async function onConfigChange(cfg) {
+      config = { ...defaultConfig, ...cfg };
+      
+      // Update school name
+      const navName = document.getElementById('nav-school-name');
+      const footerName = document.getElementById('footer-school-name');
+      if (navName) navName.textContent = config.school_name;
+      if (footerName) footerName.textContent = config.school_name;
+      
+      // Update hero tagline
+      const heroTagline = document.getElementById('hero-tagline');
+      if (heroTagline) heroTagline.textContent = config.hero_tagline;
+      
+      // Update about section
+      const aboutTitle = document.getElementById('about-title');
+      if (aboutTitle) aboutTitle.innerHTML = config.about_title.replace('Thrive', '<span style="color: ' + config.primary_color + ';">Thrive</span>');
+      
+      const aboutDesc = document.getElementById('about-description');
+      if (aboutDesc) aboutDesc.textContent = config.about_description;
+      
+      // Update activities title
+      const activitiesTitle = document.getElementById('activities-title');
+      if (activitiesTitle) activitiesTitle.innerHTML = config.activities_title.replace('Activities', '<span style="color: ' + config.secondary_color + ';">Activities</span>');
+      
+      // Update gallery images
+      for (let i = 1; i <= 9; i++) {
+        const img = document.getElementById(`gallery-img-${i}`);
+        const imageUrl = config[`gallery_image_${i}`];
+        if (img && imageUrl) {
+          img.src = imageUrl;
+          img.style.display = 'block';
+        }
+      }
+      
+      // Update social media links
+      const fbLink = document.getElementById('facebook-link');
+      const igLink = document.getElementById('instagram-link');
+      const twLink = document.getElementById('twitter-link');
+      if (fbLink) fbLink.href = config.facebook_url;
+      if (igLink) igLink.href = config.instagram_url;
+      if (twLink) twLink.href = config.twitter_url;
+      
+      // Update footer copyright
+      const footerCopyright = document.getElementById('footer-copyright');
+      if (footerCopyright) footerCopyright.textContent = config.footer_text;
+      
+      // Apply font family
+      const fontFamily = config.font_family + ', Nunito, sans-serif';
+      document.querySelectorAll('.font-heading').forEach(el => {
+        el.style.fontFamily = fontFamily;
+      });
+      
+      // Apply font size scaling
+      const baseSize = config.font_size;
+      document.body.style.fontSize = baseSize + 'px';
+    }
+
+    function mapToCapabilities(cfg) {
+      return {
+        recolorables: [
+          {
+            get: () => cfg.background_color || defaultConfig.background_color,
+            set: (value) => {
+              cfg.background_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => cfg.text_color || defaultConfig.text_color,
+            set: (value) => {
+              cfg.text_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ text_color: value });
+            }
+          },
+          {
+            get: () => cfg.primary_color || defaultConfig.primary_color,
+            set: (value) => {
+              cfg.primary_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ primary_color: value });
+            }
+          },
+          {
+            get: () => cfg.secondary_color || defaultConfig.secondary_color,
+            set: (value) => {
+              cfg.secondary_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ secondary_color: value });
+            }
+          },
+          {
+            get: () => cfg.accent_color || defaultConfig.accent_color,
+            set: (value) => {
+              cfg.accent_color = value;
+              if (window.elementSdk) window.elementSdk.setConfig({ accent_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => cfg.font_family || defaultConfig.font_family,
+          set: (value) => {
+            cfg.font_family = value;
+            if (window.elementSdk) window.elementSdk.setConfig({ font_family: value });
+          }
+        },
+        fontSizeable: {
+          get: () => cfg.font_size || defaultConfig.font_size,
+          set: (value) => {
+            cfg.font_size = value;
+            if (window.elementSdk) window.elementSdk.setConfig({ font_size: value });
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(cfg) {
+      return new Map([
+        ['school_name', cfg.school_name || defaultConfig.school_name],
+        ['hero_tagline', cfg.hero_tagline || defaultConfig.hero_tagline],
+        ['about_title', cfg.about_title || defaultConfig.about_title],
+        ['about_description', cfg.about_description || defaultConfig.about_description],
+        ['activities_title', cfg.activities_title || defaultConfig.activities_title],
+        ['gallery_image_1', cfg.gallery_image_1 || defaultConfig.gallery_image_1],
+        ['gallery_image_2', cfg.gallery_image_2 || defaultConfig.gallery_image_2],
+        ['gallery_image_3', cfg.gallery_image_3 || defaultConfig.gallery_image_3],
+        ['gallery_image_4', cfg.gallery_image_4 || defaultConfig.gallery_image_4],
+        ['gallery_image_5', cfg.gallery_image_5 || defaultConfig.gallery_image_5],
+        ['gallery_image_6', cfg.gallery_image_6 || defaultConfig.gallery_image_6],
+        ['gallery_image_7', cfg.gallery_image_7 || defaultConfig.gallery_image_7],
+        ['gallery_image_8', cfg.gallery_image_8 || defaultConfig.gallery_image_8],
+        ['gallery_image_9', cfg.gallery_image_9 || defaultConfig.gallery_image_9],
+        ['facebook_url', cfg.facebook_url || defaultConfig.facebook_url],
+        ['instagram_url', cfg.instagram_url || defaultConfig.instagram_url],
+        ['twitter_url', cfg.twitter_url || defaultConfig.twitter_url],
+        ['footer_text', cfg.footer_text || defaultConfig.footer_text]
+      ]);
+    }
+
+    // Initialize SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    } else {
+      onConfigChange(defaultConfig);
+    }
+
+    // Hamburger menu toggle
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (hamburgerBtn && mobileMenu) {
+      hamburgerBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        mobileMenu.classList.toggle('hidden');
+      });
+      
+      // Close menu when a link is clicked
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Testimonials Carousel
+    let currentTestimonial = 0;
+    const testimonialCarousel = document.getElementById('testimonials-carousel');
+    const prevBtn = document.getElementById('prev-testimonial');
+    const nextBtn = document.getElementById('next-testimonial');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const totalTestimonials = 3;
+    let autoplayInterval;
+
+    function updateCarousel() {
+      const offset = -currentTestimonial * 100;
+      testimonialCarousel.style.transform = `translateX(${offset}%)`;
+      
+      // Update dots
+      dots.forEach((dot, index) => {
+        if (index === currentTestimonial) {
+          dot.classList.add('active');
+          dot.style.opacity = '1';
+        } else {
+          dot.classList.remove('active');
+          dot.style.opacity = '0.5';
+        }
+      });
+    }
+
+    function nextTestimonial() {
+      currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+      updateCarousel();
+      resetAutoplay();
+    }
+
+    function prevTestimonial() {
+      currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
+      updateCarousel();
+      resetAutoplay();
+    }
+
+    function startAutoplay() {
+      autoplayInterval = setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+        updateCarousel();
+      }, 5000);
+    }
+
+    function resetAutoplay() {
+      clearInterval(autoplayInterval);
+      startAutoplay();
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', nextTestimonial);
+    if (prevBtn) prevBtn.addEventListener('click', prevTestimonial);
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', function() {
+        currentTestimonial = parseInt(this.getAttribute('data-index'));
+        updateCarousel();
+        resetAutoplay();
+      });
+    });
+
+    // Start autoplay on load
+    startAutoplay();
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c4f28f8003c93d1',t:'MTc2OTU4OTM2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
-
-
