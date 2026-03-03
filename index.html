@@ -89,6 +89,15 @@
     .activity-card:hover {
       transform: translateY(-8px) rotate(1deg);
     }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
   </style>
   <style>
     @view-transition {
@@ -568,7 +577,10 @@
                 <h3 id="modal-title" class="font-heading text-3xl font-bold mb-4" style="color: #2D3436;"></h3>
                 <p id="modal-description" class="text-gray-600 mb-8 leading-relaxed"></p>
 
-                <h4 class="font-heading font-bold text-lg mb-4" style="color: #2D3436;">Activity Gallery</h4>
+                <h4 class="font-heading font-bold text-lg mb-4" style="color: #2D3436;">Activity Media</h4>
+                <div id="modal-video-container" class="mb-8 hidden">
+                  <!-- Video iframe will be injected here -->
+                </div>
                 <div class="grid grid-cols-2 gap-4" id="modal-grid">
                   <!-- Additional images injected here -->
                 </div>
@@ -692,6 +704,10 @@
         category: 'Language & Literacy',
         description: 'Language comes alive in our storytime sessions. We use interactive books, finger puppets, and role-play to foster a lifelong love for reading and help children build robust vocabularies.',
         main: 'img/storytime/WhatsApp Image 2026-03-02 at 15.40.23.jpeg',
+        videos: [
+          '<iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F853950549588695%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>',
+          '<iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100064082071576%2Fvideos%2F194927252244589%2F&show_text=false&width=261&t=0" width="261" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>'
+        ],
         others: [
           'img/5.jpg'
         ]
@@ -715,7 +731,7 @@
           'img/development/WhatsApp Image 2026-03-02 at 15.40.25 (1).jpeg',
           'img/development/WhatsApp Image 2026-03-02 at 15.40.25 (2).jpeg',
           'img/development/WhatsApp Image 2026-03-02 at 15.40.26.jpeg',
-          
+
         ]
       },
       outdoor: {
@@ -726,7 +742,7 @@
         others: [
           'img/outdoor/WhatsApp Image 2026-03-02 at 15.40.24 (2).jpeg',
           'img/outdoor/WhatsApp Image 2026-03-02 at 15.40.26 (2).jpeg',
-          
+
         ]
       },
       social: {
@@ -753,6 +769,24 @@
       mainImg.style.backgroundImage = `url('${data.main}')`;
       mainImg.dataset.src = data.main;
 
+      const videoContainer = document.getElementById('modal-video-container');
+      if (data.videos && data.videos.length > 0) {
+        // Horizontal scroll for multiple videos
+        videoContainer.innerHTML = `
+          <div class="flex gap-4 overflow-x-auto pb-6 snap-x no-scrollbar">
+            ${data.videos.map(v => `<div class="flex-shrink-0 snap-center shadow-lg rounded-xl overflow-hidden">${v}</div>`).join('')}
+          </div>
+          <p class="text-xs text-center text-gray-400 mt-2">← Swipe to see more videos →</p>
+        `;
+        videoContainer.classList.remove('hidden');
+      } else if (data.video) {
+        videoContainer.innerHTML = `<div class="flex justify-center shadow-lg rounded-xl overflow-hidden">${data.video}</div>`;
+        videoContainer.classList.remove('hidden');
+      } else {
+        videoContainer.innerHTML = '';
+        videoContainer.classList.add('hidden');
+      }
+
       const grid = document.getElementById('modal-grid');
       grid.innerHTML = data.others.map(img => `
         <div class="aspect-square rounded-2xl bg-cover bg-center shadow-sm cursor-pointer hover:opacity-90 transition-opacity" 
@@ -766,6 +800,7 @@
 
     function closeActivityModal() {
       document.getElementById('activity-modal').classList.add('hidden');
+      document.getElementById('modal-video-container').innerHTML = ''; // Stop video
       document.body.style.overflow = 'auto';
     }
 
