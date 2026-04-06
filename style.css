@@ -1,0 +1,163 @@
+:root {
+  --primary: #52c5f1; /* Light Blue from image */
+  --secondary: #fbbd08; /* Vivid Yellow from image */
+  --text-main: #2D3436;
+  --text-muted: #636E72;
+  --bg-white: #FFFFFF;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-white);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+.font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Navigation - Clean White */
+.navbar-clean {
+  background: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-link-clean {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #888;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  transition: var(--transition);
+}
+
+.nav-link-clean:hover, .nav-link-clean.active {
+  color: var(--primary);
+}
+
+/* Hero Section - Airy & Bright */
+.hero-airy {
+  padding: 100px 0;
+  background-color: #f7f9fb;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-title-airy {
+  font-size: 42px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle-airy {
+  font-size: 32px;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.btn-purchase {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition);
+}
+
+.btn-purchase:hover {
+  background-color: #3eb5e1;
+  transform: translateY(-2px);
+}
+
+/* Feature Ribbon - Yellow Full Width */
+.feature-ribbon {
+  background-color: var(--secondary);
+  padding: 60px 0;
+  text-align: center;
+  color: white;
+}
+
+.ribbon-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.ribbon-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.ribbon-item-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.ribbon-item-desc {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* Info Section - Modern Split */
+.info-section {
+  padding: 100px 0;
+}
+
+.info-badge {
+  color: #ff6e9d; /* Pink from image text */
+  font-weight: 700;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.info-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.info-divider {
+  width: 50px;
+  height: 2px;
+  background-color: #ff6e9d;
+  margin: 20px auto;
+}
+
+@media (min-width: 1024px) {
+  .info-divider { margin: 20px 0; }
+}
+
+/* Image Grids */
+.img-rounded-lg {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Testimonials - Large Quote Style */
+.testimonial-airy {
+  padding: 80px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.testimonial-text {
+  font-size: 20px;
+  font-style: italic;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
