@@ -24,13 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Navigation Transition on Scroll
     const mainNav = document.getElementById('main-nav');
+    const navTopRow = document.querySelector('.nav-top-row');
+    
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            mainNav.style.padding = '8px 0';
+            if (navTopRow) navTopRow.style.display = 'none';
             mainNav.style.boxShadow = '0 10px 40px rgba(0,0,0,0.1)';
         } else {
-            mainNav.style.padding = '15px 0';
-            mainNav.style.boxShadow = 'none';
+            if (navTopRow) navTopRow.style.display = 'flex';
+            mainNav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
         }
     });
 
