@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            if (navTopRow) navTopRow.style.display = 'none';
+            mainNav.classList.add('scrolled');
             mainNav.style.boxShadow = '0 10px 40px rgba(0,0,0,0.1)';
         } else {
-            if (navTopRow) navTopRow.style.display = 'flex';
+            mainNav.classList.remove('scrolled');
             mainNav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
         }
     });

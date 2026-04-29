@@ -37,6 +37,13 @@ body {
     background: var(--bg-main);
     line-height: 1.6;
     overflow-x: hidden;
+    padding-top: 135px; /* Space for fixed nav */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px; /* Less space on mobile */
+    }
 }
 
 h1,
@@ -88,7 +95,9 @@ nav {
     background: white;
     width: 100%;
     z-index: 1000;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -232,12 +241,9 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 45px;
-        height: 45px;
-        background: var(--primary);
-        color: var(--white) !important;
-        border-radius: 50%;
-        box-shadow: 0 4px 12px rgba(45, 50, 142, 0.2);
+        background: transparent;
+        color: var(--primary) !important;
+        font-size: 2rem;
     }
 
     .nav-links,
@@ -254,7 +260,7 @@ nav {
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         text-align: center;
         border-bottom: 3px solid var(--primary);
-        z-index: 999;
+        z-index: 2000; /* Ensure it's above everything */
     }
 
     .nav-links.mobile-active,
@@ -269,6 +275,12 @@ nav {
     }
 
     .nav-bottom-row {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-bottom-row .nav-contact-new {
         display: none;
     }
 
@@ -280,17 +292,14 @@ nav {
         flex-direction: row;
         align-items: center;
         gap: 12px;
+        justify-content: center;
+        width: 100%;
     }
 
-    .logo img {
-        height: 35px !important;
-    }
-
-    .logo span {
-        font-size: 0.95rem !important;
-        max-width: 200px;
-        line-height: 1.2;
-        text-align: left;
+    .nav-top-row {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
     }
 }
 
@@ -299,24 +308,22 @@ nav {
     color: #fff !important;
 }
 
-@media (max-width: 900px) {
+/* Scrolled State Nav Adjustments */
+.main-navigation-bar.scrolled .nav-top-row {
+    padding: 8px 20px;
+}
 
-    .nav-top-row,
-    .nav-bottom-row {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
-        text-align: center;
-    }
+.main-navigation-bar.scrolled .logo-text-main {
+    display: none; /* Hide text on scroll to save space */
+}
 
-    .nav-links-new,
-    .nav-contact-new {
-        flex-direction: column;
-        gap: 10px;
-    }
+.main-navigation-bar.scrolled .logo-img-main {
+    height: 35px;
+}
 
-    .logo {
-        flex-direction: row;
+@media (max-width: 768px) {
+    .main-navigation-bar.scrolled .logo-text-main {
+        display: none;
     }
 }
 
