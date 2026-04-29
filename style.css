@@ -356,7 +356,7 @@ nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -389,7 +389,8 @@ nav {
 }
 
 .hero-title {
-    font-size: 5rem;
+    font-size: 4.5rem;
+    font-weight: 900;
     line-height: 1.1;
     margin-bottom: 25px;
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -445,7 +446,15 @@ nav {
 }
 
 .staggered-col-right {
-    margin-top: 150px;
+    margin-top: 100px;
+}
+
+.staggered-col-left-bottom {
+    margin-top: -60px;
+}
+
+.staggered-col-right-bottom {
+    margin-top: 40px;
 }
 
 .staggered-item {
@@ -478,10 +487,12 @@ nav {
 @media (max-width: 768px) {
     .staggered-grid {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 40px;
     }
 
-    .staggered-col-right {
+    .staggered-col-right,
+    .staggered-col-left-bottom,
+    .staggered-col-right-bottom {
         margin-top: 0;
     }
 
@@ -582,29 +593,105 @@ nav {
     letter-spacing: 1px;
 }
 
-/* About & Philosophy */
-.about-section {
-    padding: 100px 0;
+/* Environment Section */
+.environment-section {
+    padding-top: 50px;
 }
 
-.img-badge span {
-    font-size: 1.8rem;
-    font-weight: 800;
-    display: block;
-    line-height: 1;
-}
-
-.img-badge p {
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.rounded-img {
+.env-full-img {
     width: 100%;
-    border-radius: 50px;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
-    filter: contrast(1.05) brightness(1.02);
+    height: 600px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.env-full-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.env-split {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.env-split-img {
+    flex: 1 1 50%;
+    min-height: 400px;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.env-split-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.env-split-text {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.env-split-text h3 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: 800;
+}
+
+.env-split-text h4 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #333;
+}
+
+.env-split-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #222;
+    max-width: 85%;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .env-full-img {
+        height: 350px;
+    }
+
+    .env-split {
+        flex-direction: column;
+    }
+
+    .env-split-reverse {
+        flex-direction: column-reverse;
+    }
+
+    .env-split-img,
+    .env-split-text {
+        flex: 1 1 100%;
+        max-height: none;
+        padding: 40px 20px;
+    }
+
+    .env-split-img {
+        min-height: 300px;
+    }
+
+    .env-split-text h3 {
+        font-size: 2rem;
+    }
 }
 
 /* Uneven Gallery */
@@ -1214,31 +1301,25 @@ footer {
     }
 
     /* Hero Mobile */
+    /* Hero Mobile */
     .hero-full {
-        height: auto;
-        padding: 120px 20px 80px;
-        background-attachment: fixed;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-        margin-bottom: 15px;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-        margin-bottom: 20px;
-    }
-
-    .hero-full {
-        padding: 220px 15px 60px;
+        padding: 120px 15px 60px;
         height: auto;
         min-height: 80vh;
         background-attachment: scroll;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        /* Align to top to respect padding */
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
     }
 
     .hero-btns {
