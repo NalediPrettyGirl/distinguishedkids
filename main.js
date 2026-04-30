@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Page Loader Hiding Logic
+    const loader = document.querySelector('.page-loader');
+    if (loader) {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loader.classList.add('fade-out');
+                document.body.classList.remove('loading-active');
+                document.body.classList.add('loaded');
+                
+                // Re-enable scrolling after the animation finishes
+                setTimeout(() => {
+                    document.body.style.overflow = 'initial';
+                }, 1000);
+            }, 1200); // Slightly longer for a more deliberate feel
+        });
+        
+        // Fallback
+        setTimeout(() => {
+            if (!loader.classList.contains('fade-out')) {
+                loader.classList.add('fade-out');
+                document.body.classList.remove('loading-active');
+                document.body.classList.add('loaded');
+                document.body.style.overflow = 'initial';
+            }
+        }, 4000);
+    }
+
     // 1. Scroll Reveal Animation Logic
     const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
     const revealOnScroll = new IntersectionObserver((entries, observer) => {

@@ -40,6 +40,144 @@ body {
     padding-top: 135px; /* Space for fixed nav */
 }
 
+/* Premium Page Loader - Enhanced */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #ffffff 0%, #f0f4f8 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1), visibility 1s;
+}
+
+.loader-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loader-visuals {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.loader-logo {
+    width: 100px;
+    height: auto;
+    z-index: 2;
+    filter: drop-shadow(0 10px 20px rgba(45, 50, 142, 0.15));
+    animation: floatLogo 3s infinite ease-in-out;
+}
+
+/* Dual Concentric Rings */
+.ring-outer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-top: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    border-radius: 50%;
+    animation: spinClockwise 2s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
+}
+
+.ring-inner {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border: 2px solid transparent;
+    border-left: 2px solid var(--secondary);
+    border-right: 2px solid var(--secondary);
+    border-radius: 50%;
+    animation: spinCounterClockwise 1.5s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
+}
+
+.loader-text-container {
+    overflow: hidden;
+}
+
+.loader-text {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: flex;
+    gap: 4px;
+}
+
+.loader-text span {
+    display: inline-block;
+    animation: jumpText 1.5s infinite ease-in-out;
+}
+
+/* Staggered animation for letters */
+.loader-text span:nth-child(1) { animation-delay: 0.1s; }
+.loader-text span:nth-child(2) { animation-delay: 0.2s; }
+.loader-text span:nth-child(3) { animation-delay: 0.3s; }
+.loader-text span:nth-child(4) { animation-delay: 0.4s; }
+.loader-text span:nth-child(5) { animation-delay: 0.5s; }
+.loader-text span:nth-child(6) { animation-delay: 0.6s; }
+.loader-text span:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes floatLogo {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.05); }
+}
+
+@keyframes spinClockwise {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spinCounterClockwise {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes jumpText {
+    0%, 100% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(-10px); opacity: 1; color: var(--secondary); }
+}
+
+.page-loader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Reveal Animation for Body Content */
+body.loading-active {
+    overflow: hidden;
+}
+
+body.loading-active main, 
+body.loading-active nav, 
+body.loading-active section {
+    filter: blur(10px);
+    transform: scale(1.1);
+    transition: filter 1s ease, transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body.loaded main, 
+body.loaded nav, 
+body.loaded section {
+    filter: blur(0);
+    transform: scale(1);
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 80px; /* Less space on mobile */
@@ -980,17 +1118,17 @@ nav {
         height: 300px !important;
     }
 
-    /* Target Enrolment Section */
-    #enrolment {
+    /* Target Enrollment Section */
+    #enrollment {
         padding: 60px 20px !important;
     }
 
-    #enrolment>div {
+    #enrollment>div {
         padding: 40px 20px !important;
         margin-top: 20px !important;
     }
 
-    #enrolment h2 {
+    #enrollment h2 {
         font-size: 2rem !important;
     }
 
